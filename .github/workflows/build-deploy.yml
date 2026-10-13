@@ -10,6 +10,7 @@ on:
       - 'pages/**'
       - 'data/*.json'
       - 'layouts/**'
+      - 'cecil.yml'
       - 'config.*.yml'
       - 'composer.json'
       - 'package.json'
