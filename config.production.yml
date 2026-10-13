@@ -15,9 +15,6 @@ languages:
   - code: en
     name: English
     locale: en_US
-  - code: de
-    name: German
-    locale: de_DE
 date:
   format: "j F Y H:i"
   timezone: Europe/Berlin
@@ -29,7 +26,7 @@ output:
   formats:
     - name: html
       mediatype: "text/html"
-      suffix: "/index"
+      filename: index
       extension: "html"
       exclude: [exclude]
 static:
@@ -38,6 +35,7 @@ static:
     - '*.scss'
     - '*.html'
     - '/^scss/'
+    - '/^vendor/'
     - 'animate.*'
     - 'bootstrap.js*'
     - 'bootstrap.min.*'
@@ -60,8 +58,8 @@ assets:
   minify:
     enabled: true
 node:
-  dir: ../node_modules
-postprocess:
+  dir: vendor
+optimize:
   enabled: true
   html:
     ext: [html, htm]
@@ -86,9 +84,10 @@ menus:
       name: FAQ
       url: "#faq"
       weight: 8
-paths:
-  - section: news
-    path: :section/:year/:month/:day/:slug
-pagination:
-  max: 3
-  path: page
+pages:
+  paths:
+    - section: news
+      path: :section/:year/:month/:day/:slug
+  pagination:
+    max: 3
+    path: page

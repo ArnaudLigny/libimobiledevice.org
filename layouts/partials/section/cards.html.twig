@@ -23,7 +23,7 @@
 				<p class="card-text">{{ item.content | excerpt_html }}</p>
 			</div>
 			<div class="card-footer">
-				<p class="card-text"><small class="text-muted">{{ item.date | localizeddate('medium', 'short') }}</small></p>
+				<p class="card-text"><small class="text-muted">{{ item.date | format_datetime('medium', 'short') }}</small></p>
 			</div>
 		</div>
 	</div>

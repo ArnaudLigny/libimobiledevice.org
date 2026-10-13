@@ -17,7 +17,7 @@
 {% endblock section_header %}
 
 {% block section_content %}
-{% set platforms = site.pages | filter_by('section', section.slug) | sort_by_weight %}
+{% set platforms = site.pages | filter(p => p.type == 'page' and p.folder == section.slug and p.id != section.id) | sort_by_weight %}
 <div class="row">
 	<div class="col-12">
 

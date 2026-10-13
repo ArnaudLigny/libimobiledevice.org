@@ -18,7 +18,7 @@
 	<meta name="robots" content="index, follow">
 	<meta name="language" content="{{ site.language | default('en') }}">
 
-	{% set main_css_url = asset('scss/main.scss', {'filename': 'css/main.css'}) | url %}
+	{% set main_css_url = asset('scss/main.scss') | url %}
 	<link rel="preload" as="style" href="{{ main_css_url }}">
 
 	{% include 'partials/metatags.html.twig' %}

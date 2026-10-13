@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "postinstall": "node bin/copy-vendor-assets.js"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "animate-sass": "https://github.com/tgdev/animate-sass",
