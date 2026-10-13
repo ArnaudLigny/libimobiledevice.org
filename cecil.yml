@@ -6,8 +6,11 @@ keywords: "Linux, iOS, iPhone, iPod Touch, iPad, iPad mini, Apple TV, iTunes, de
 image: img/brand/brand-ontop-gradient-alpha.png
 canonicalurl: false
 googleanalytics: false
-twitter:
-  username: libimobiledev
+social:
+  twitter:
+    site: libimobiledev
+metatags:
+  articles: news # Open Graph "article" type for news
 urls:
   docs: https://libimobiledevice.org/docs
 language: en

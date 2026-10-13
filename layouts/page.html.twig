@@ -1,7 +1,3 @@
-{%- set title = page.title ~ ' &middot; ' ~ site.title -%}
-{%- if page.type == 'homepage' -%}
-{%- set title = site.title ~ ' &middot; ' ~ site.baseline -%}
-{%- endif -%}
 <!DOCTYPE html>
 <html lang="{{ site.language | default('en') }}">
 <head>
@@ -13,24 +9,17 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>{{ title }}</title>
-
-	<meta name="robots" content="index, follow">
 	<meta name="language" content="{{ site.language | default('en') }}">
 
 	{% set main_css_url = asset('scss/main.scss') | url %}
 	<link rel="preload" as="style" href="{{ main_css_url }}">
 
-	{% include 'partials/metatags.html.twig' %}
+	{# title, description, robots, favicons, canonical, feeds, Open Graph, Twitter, etc. #}
+	{{ include('partials/metatags.html.twig') }}
 
 	<meta name="theme-color" content="#0a9197">
 
-	<link rel="canonical" href="{{ url(page, {canonical:true}) }}">
-
 	<link rel="stylesheet" href="{{ main_css_url }}">
-
-	<link rel="shortcut icon" href="{{ url('favicon.ico') }}">
-	<link rel="icon" href="{{ url('favicon.ico') }}" type="image/x-icon">
 	{% endblock head %}
 
 </head>
