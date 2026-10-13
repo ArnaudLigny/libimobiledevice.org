@@ -20,7 +20,7 @@
 	{% for link in site.data.community.links | sort((a, b) => a.weight > b.weight) %}
 	<div class="col mb-4 h-100">
 		<div class="card justify-content-center mb-1 border-0">
-			<div class="row no-gutters align-items-center">
+			<div class="row g-0 align-items-center">
 				<div class="card-body">
 					<div class="card-img-top"><i class="{{ link.icon ?? 'fas fa-external-link-alt' }} fa-2x" title="{{ link.title }}"></i></div>
 					<hr class="border-warning">

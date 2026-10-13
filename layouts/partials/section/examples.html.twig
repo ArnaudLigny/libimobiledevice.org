@@ -20,13 +20,13 @@
 		{% apply spaceless %}
 		<ul class="nav nav-tabs" role="tablist">
 			<li class="nav-item">
-				<a class="nav-link active" id="example-content-connecting-tab" data-toggle="tab" href="#example-content-connecting" role="tab" aria-controls="example-content-connecting" aria-selected="true">Connect (C)</a>
+				<a class="nav-link active" id="example-content-connecting-tab" data-bs-toggle="tab" href="#example-content-connecting" role="tab" aria-controls="example-content-connecting" aria-selected="true">Connect (C)</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="example-content-info-tab" data-toggle="tab" href="#example-content-info" role="tab" aria-controls="example-content-info" aria-selected="true">Read (C)</a>
+				<a class="nav-link" id="example-content-info-tab" data-bs-toggle="tab" href="#example-content-info" role="tab" aria-controls="example-content-info" aria-selected="true">Read (C)</a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" id="example-content-utilities-tab" data-toggle="tab" href="#example-content-utilities" role="tab" aria-controls="example-content-utilities" aria-selected="true">Utilities (Console)</a>
+				<a class="nav-link" id="example-content-utilities-tab" data-bs-toggle="tab" href="#example-content-utilities" role="tab" aria-controls="example-content-utilities" aria-selected="true">Utilities (Console)</a>
 			</li>
 		</ul>
 		{% endapply %}
@@ -34,8 +34,8 @@
 		{# Tabs Content #}
 		<div class="tab-content bg-white" id="example-content-tabs-content">
 
-			<div class="tab-pane p-1 border-left border-right border-bottom show active" id="example-content-connecting" role="tabpanel" aria-labelledby="example-content-connecting-tab">
-				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
+			<div class="tab-pane p-1 border-start border-end border-bottom show active" id="example-content-connecting" role="tabpanel" aria-labelledby="example-content-connecting-tab">
+				<pre class="border border-muted rounded-3 mb-0"><code class="language-c c">{{ '...
 #include <libimobiledevice/libimobiledevice.h>
 
 /* Unique Device Identifier */
@@ -66,8 +66,8 @@ free(udid);
 ...' | e('html') }}</code></pre>
 			</div>
 
-			<div class="tab-pane p-1 border-left border-right border-bottom" id="example-content-info" role="tabpanel" aria-labelledby="example-content-info-tab">
-				<pre class="border border-muted rounded-lg mb-0"><code class="language-c c">{{ '...
+			<div class="tab-pane p-1 border-start border-end border-bottom" id="example-content-info" role="tabpanel" aria-labelledby="example-content-info-tab">
+				<pre class="border border-muted rounded-3 mb-0"><code class="language-c c">{{ '...
 #include <libimobiledevice/lockdown.h>
 #include <plist/plist.h>
 
@@ -104,8 +104,8 @@ lockdownd_client_free(lockdown);
 ...' | e('html') }}</code></pre>
 			</div>
 
-			<div class="tab-pane p-1 border-left border-right border-bottom" id="example-content-utilities" role="tabpanel" aria-labelledby="example-content-utilities-tab">
-				<pre class="border border-muted rounded-lg mb-0"><code class="language-shell-session shell">{{ '$ ideviceinfo -k ProductVersion
+			<div class="tab-pane p-1 border-start border-end border-bottom" id="example-content-utilities" role="tabpanel" aria-labelledby="example-content-utilities-tab">
+				<pre class="border border-muted rounded-3 mb-0"><code class="language-shell-session shell">{{ '$ ideviceinfo -k ProductVersion
 12.4
 $ ideviceinfo -s
 BasebandCertId: xxxxxxxxxx

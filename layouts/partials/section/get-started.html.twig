@@ -26,7 +26,7 @@
 		<ul class="nav nav-tabs" role="tablist">
 			{% for platform in platforms %}
 			<li class="nav-item">
-				<a class="nav-link{{ loop.first ? ' active': '' }}" id="{{ platform.slug }}-tab" data-toggle="tab" href="#{{ section.slug }}-{{ platform.slug }}" role="tab" aria-controls="{{ section.slug }}-{{ platform.slug }}" aria-selected="true" title="{{ platform.title | e }}"><i class="{{ platform.icon }} fa-fw"></i>&nbsp;{{ platform.title }}</a>
+				<a class="nav-link{{ loop.first ? ' active': '' }}" id="{{ platform.slug }}-tab" data-bs-toggle="tab" href="#{{ section.slug }}-{{ platform.slug }}" role="tab" aria-controls="{{ section.slug }}-{{ platform.slug }}" aria-selected="true" title="{{ platform.title | e }}"><i class="{{ platform.icon }} fa-fw"></i>&nbsp;{{ platform.title }}</a>
 			</li>
 			{% endfor %}
 		</ul>
@@ -37,7 +37,7 @@
 		<div class="tab-content bg-white" id="{{ section.slug }}-tabs-content">
 
 			{% for platform in platforms %}
-			<div class="tab-pane pt-4 border-left border-right border-bottom fade{{ loop.first ? ' show active': '' }}" id="{{ section.slug }}-{{ platform.slug }}" role="tabpanel" aria-labelledby="{{ platform.slug }}-tab">
+			<div class="tab-pane pt-4 border-start border-end border-bottom fade{{ loop.first ? ' show active': '' }}" id="{{ section.slug }}-{{ platform.slug }}" role="tabpanel" aria-labelledby="{{ platform.slug }}-tab">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-12 mb-2">
@@ -54,7 +54,7 @@
 									{#- List group -#}
 									<div class="list-group" id="{{ section.slug }}-{{ platform.slug }}-tablist" role="tablist">
 										{% for guide in guides %}
-										<a class="list-group-item list-group-item-action{{ loop.first ? ' active': '' }}" data-toggle="list" href="#{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tab">{{ guide.title }}</a>
+										<a class="list-group-item list-group-item-action{{ loop.first ? ' active': '' }}" data-bs-toggle="list" href="#{{ section.slug }}-{{ platform.slug }}-{{ guide.slug }}" role="tab">{{ guide.title }}</a>
 										{% endfor %}
 									</div>
 								</div>

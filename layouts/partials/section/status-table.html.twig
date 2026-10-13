@@ -12,7 +12,7 @@
 <div class="row">
 	<div class="col-12 mb-5 mb-lg-0">
 			<table class="table table-block-md table-striped table-hover table-bordered table-responsive-sm bg-white">
-				<thead class="thead-light">
+				<thead class="table-light">
 					<tr>
 						<th scope="col" class="d-none d-md-table-cell">Service</th>
 						<th scope="col" class="d-none d-md-table-cell">Progress</th>
@@ -24,7 +24,7 @@
 					{% for service in site.data.services %}
 					{% set state_context = (service.state == 'done' ? 'success': (service.state == 'partly' ? 'warning': 'dark')) %}
 					<tr class="mb-4 mb-md-auto">
-						<th scope="row"><i class="fas fa-cog fa-fw text-info mr-2"></i>{{ service.id }}</th>
+						<th scope="row"><i class="fas fa-cog fa-fw text-info me-2"></i>{{ service.id }}</th>
 						<td{% if service.state != 'none' %} class="table-{{ state_context }}"{% endif %}><strong class="d-md-none">Progress:&nbsp;</strong><div class="d-inline-block">{{ service.state | capitalize }}<div></td>
 						<td class="text-md-center"><strong class="d-md-none">iOS:&nbsp;</strong>{{ service.firmware }}</td>
 						<td{{ service.comment | length ? '': ' class="d-none d-md-table-cell"' }}>{{ service.comment }}</td>

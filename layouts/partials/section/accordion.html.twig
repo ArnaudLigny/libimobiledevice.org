@@ -18,10 +18,10 @@
 			<div class="card mb-5 border-bottom shadow-sm{{ loop.first ? ' active': '' }}">
 				<div class="card-header">
 					<h5 class="mb-0">
-					<a class="text-dark " data-toggle="collapse" data-parent="#accordion" href="#collapse-{{ loop.index }}" aria-expanded="true">{{- item.title -}}</a>
+					<a class="text-dark " data-bs-toggle="collapse" data-bs-parent="#accordion" href="#collapse-{{ loop.index }}" aria-expanded="true">{{- item.title -}}</a>
 					</h5>
 				</div>
-				<div id="collapse-{{ loop.index }}" class="collapse{{ loop.first ? ' show': '' }}" data-parent="#accordion" style="">
+				<div id="collapse-{{ loop.index }}" class="collapse{{ loop.first ? ' show': '' }}" data-bs-parent="#accordion" style="">
 					<div class="card-body">{{- include(template_from_string(item.body), {'page': item}) | trim | replace({'# ': '#### '}) | markdown_to_html | raw | replace({'href=': 'rel="noopener" target="_blank" href='}) | slice(3) | slice(0,-4) -}}</div>
 				</div>
 			</div>
