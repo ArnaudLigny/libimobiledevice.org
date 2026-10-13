@@ -76,24 +76,3 @@ $transition-filter:            filter .5s, opacity .5s !default;
 
 $use-fade:                     true;
 $base-duration:                4s;
-
-// fontawesome options
-
-$fa-font-path:                 "../fonts";
-$fac-font-path:                $fa-font-path;
-
-$fa-font-size-base:            16px;
-$fa-font-display:              block;
-$fa-css-prefix:                fa;
-$fa-version:                   "5.13.1";
-$fa-border-color:              #eee;
-$fa-inverse:                   #fff;
-$fa-li-width:                  2em;
-$fa-fw-width:                  (20em / 16);
-$fa-primary-opacity:           1;
-$fa-secondary-opacity:         .4;
-
-// Convenience function used to set content property
-@function fa-content($fa-var) {
-  @return unquote("\"#{ $fa-var }\"");
-}

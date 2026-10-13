@@ -9,7 +9,7 @@
 
 		{% if site.data.community.links is defined %}
 		{% for link in site.data.community.links | filter(v => 'development' in v.type or 'socialmedia' in v.type) | sort((a, b) => a.weight > b.weight) %}
-		<a class="text-reset mx-2" href="{{ link.url }}" target="_blank" rel="noopener"><i class="{{ link.icon ?? 'fas fa-external-link-alt' }} fa-fw" target="_blank" rel="noopener" title="{{ link.tagline }}"></i></a>
+		<a class="text-reset mx-2" href="{{ link.url }}" target="_blank" rel="noopener"><i class="{{ link.icon ?? 'fas fa-up-right-from-square' }} fa-fw" target="_blank" rel="noopener" title="{{ link.tagline }}"></i></a>
 		{% endfor %}
 		{% endif %}
 	</div>
@@ -73,7 +73,7 @@
 			{% if site.data.community.links is defined %}
 			{% for link in site.data.community.links | filter(v => 'development' in v.type or 'socialmedia' in v.type) | sort((a, b) => a.weight > b.weight) %}
 			<li class="nav-item">
-				<a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon ?? 'fas fa-external-link-alt' }} fa-fw" target="_blank" rel="noopener" title="{{ link.tagline }}"></i></a>
+				<a class="nav-link" href="{{ link.url }}"><i class="{{ link.icon ?? 'fas fa-up-right-from-square' }} fa-fw" target="_blank" rel="noopener" title="{{ link.tagline }}"></i></a>
 			</li>
 			{% endfor %}
 			{% endif %}

@@ -7,11 +7,11 @@
 <ul class="pagination pagination-sm justify-content-center">
 	{% if pagination.links.first is defined and pagination.links.first != page.id %}
 	<li class="page-item">
-		<a href="{{ url(site.pages[pagination.links.first]) }}" class="page-link"><i class="fas fa-angle-double-left"></i></a>
+		<a href="{{ url(site.pages[pagination.links.first]) }}" class="page-link"><i class="fas fa-angles-left"></i></a>
 	</li>
 	{% else %}
 	<li class="page-item disabled">
-		<span class="page-link"><i class="fas fa-angle-double-left"></i></span>
+		<span class="page-link"><i class="fas fa-angles-left"></i></span>
 	</li>
 	{% endif %}
 
@@ -49,11 +49,11 @@
 
 	{% if pagination.links.last is defined and pagination.current != pagination.count %}
 	<li class="page-item">
-		<a href="{{ url(site.pages[pagination.links.last]) }}" class="page-link"><i class="fas fa-angle-double-right"></i></a>
+		<a href="{{ url(site.pages[pagination.links.last]) }}" class="page-link"><i class="fas fa-angles-right"></i></a>
 	</li>
 	{% else %}
 	<li class="page-item disabled">
-		<span class="page-link"><i class="fas fa-angle-double-right"></i></span>
+		<span class="page-link"><i class="fas fa-angles-right"></i></span>
 	</li>
 	{% endif %}
 </ul>

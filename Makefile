@@ -9,7 +9,7 @@ package-lock.json:
 	@if [ ! -f ./package-lock.json ]; then npm install --silent; else npm update --silent; fi
 
 assets/vendor: package-lock.json
-	@node bin/copy-vendor-assets.js
+	@node bin/copy-vendor-assets.js && node bin/build-fontawesome.js
 
 data/github:
 	@./bin/github-download-organization-repos-latest-releases-data libimobiledevice

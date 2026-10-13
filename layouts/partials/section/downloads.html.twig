@@ -62,7 +62,7 @@
 
 					{% if repo.license.key is defined and repo.license.key != 'other' %}
 					{% set license = repo.license %}
-					<span class="text-muted mx-2"><i class="fas fa-balance-scale fa-fw me-2"></i><a href="http://choosealicense.com/licenses/{{ license.key }}" target="_blank" rel="noreferrer" class="text-reset" title="View {{ license.name | e }}">{{ repo.license.spdx_id }} License</a></span>
+					<span class="text-muted mx-2"><i class="fas fa-scale-balanced fa-fw me-2"></i><a href="http://choosealicense.com/licenses/{{ license.key }}" target="_blank" rel="noreferrer" class="text-reset" title="View {{ license.name | e }}">{{ repo.license.spdx_id }} License</a></span>
 					{% endif %}
 				</div>
 				{% set deps = site.data.github.libimobiledevice[repo.name].dependencies | map(i => i == 'limd_glue' ? 'libimobiledevice-glue' : i) %}
