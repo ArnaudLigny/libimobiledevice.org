@@ -11,7 +11,7 @@ const files = [
 	'jquery/dist/jquery.slim.min.js',
 	'bootstrap/dist/js/bootstrap.bundle.min.js',
 	'smoothscroll-polyfill/dist/smoothscroll.min.js',
-	'waypoints/lib/jquery.waypoints.min.js',
+	'waypoints/lib/noframework.waypoints.min.js',
 	'waypoints/lib/shortcuts/inview.min.js',
 ];
 
